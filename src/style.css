@@ -1,0 +1,146 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcfbfa; /* Warm off-white */
+    color: #2c2c2c; /* Deep charcoal for high contrast readability */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. APP CONTAINER & NAVIGATION
+   ========================================================================== */
+#content {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #e0dcd3;
+    padding-bottom: 1rem;
+}
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #766e65;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+}
+
+nav button:hover {
+    color: #8c2f1b; /* Culinary terracotta red */
+    background-color: #f2efe9;
+}
+
+/* Optional active class highlight for the active tab */
+nav button.active {
+    color: #8c2f1b;
+    border-bottom: 3px solid #8c2f1b;
+    border-radius: 4px 4px 0 0;
+}
+
+/* ==========================================================================
+   3. DYNAMIC TAB CONTENT FRAMEWORK
+   ========================================================================== */
+.tab-content {
+    animation: fadeIn 0.4s ease-out; /* Smooth transition effect when tabs switch */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.tab-content h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.tab-content p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    color: #55504a;
+}
+
+/* ==========================================================================
+   4. COMPONENT SPECIFIC LAYOUTS (Menu & Contact)
+   ========================================================================== */
+/* Menu Grid System */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border: 1px solid #eadecc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(140, 47, 27, 0.06);
+}
+
+.menu-item h3 {
+    color: #8c2f1b;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Info Card */
+.contact-card {
+    background-color: #ffffff;
+    border-left: 4px solid #8c2f1b;
+    padding: 2rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ==========================================================================
+   5. ANIMATIONS
+   ========================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
