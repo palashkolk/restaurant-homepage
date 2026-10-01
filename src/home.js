@@ -3,7 +3,7 @@ export function loadHome(){
     homeDiv.classList.add('tab-content');
 
     const title = document.createElement('h1');
-    title.textContent = "Welcome to The Odin Kuthi";
+    title.textContent = "Welcome to The Odin Destination";
 
     const copy = document.createElement('p');
     copy.textContent = "Crafting new life with the ODIN project";

@@ -4,6 +4,10 @@ import { loadHome } from './home.js';
 import { loadMenu } from './menu.js';
 import { loadContact } from './contact.js';
 
+//  if (process.env.NODE_ENV !== 'production') {
+//    console.log('Looks like we are in development mode!');
+//  }
+
 function createNavigation() {
     const nav = document.createElement('nav');
 
